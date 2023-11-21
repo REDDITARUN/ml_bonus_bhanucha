@@ -59,7 +59,7 @@ class VGG_11_CNN(nn.Module):
 
 def process_image(img):
     img = ImageOps.grayscale(img)  # Use ImageOps for grayscale conversion
-    img = img.resize((32, 32))
+    img = img.resize((28, 28))
     img_array = np.asarray(img) / 255.0
     img_array = img_array.reshape((1, 1, 32, 32))  # Adjust the shape for PyTorch
     st.write("Returning Pre processed...")
